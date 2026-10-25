@@ -1,0 +1,53 @@
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Dependencies
+node_modules/
+
+# Next.js and build output
+.next/
+out/
+dist/
+build/
+coverage/
+
+# Package manager and tooling
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# Logs and local files
+*.log
+.DS_Store
+Thumbs.db
+
+# Private keys and credentials
+*.pem
+*.p12
+*.key
+serviceAccountKey.json
+firebase-adminsdk*.json
+
+# Deployment and TypeScript
+.vercel/
+*.tsbuildinfo
+next-env.d.ts
+
+# Firebase Admin service-account credentials
+backend/ecopulse-eed05-firebase-adminsdk-fbsvc-8aeda1f5a7.json
+
+# Admin creation script (contains hardcoded password)
+backend/createAdmin.js
+
+# Uploaded documents and potentially private user files
+backend/uploads/
+
+# Local Git metadata backups
+frontend/.git-backup/
+frontend/.git-frontend-old/

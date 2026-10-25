@@ -1,0 +1,113 @@
+/* frontend/src/styles/globals.css */
+@import "tailwindcss";
+@import "tailwindcss/utilities";
+
+
+/* 🌿🌊 Blue–Green Eco Theme (Light Mode) */
+:root {
+  --background: #f6fbff;        /* soft icy blue */
+  --foreground: #0d1f26;        /* deep ocean-dark blue */
+
+  --primary: #0ea371;           /* vibrant eco green */
+  --primary-dark: #0a8158;      /* darker eco green */
+  --secondary: #0b7cc2;         /* clean strong blue */
+  --secondary-dark: #085c94;    /* darker blue */
+
+  --accent: #51c1a9;            /* mint green */
+  --accent-blue: #5eb3f7;       /* sky blue */
+
+  --card: #ffffff;              /* clean white cards */
+  --border: #d0e4ef;            /* very light blue borders */
+
+  
+  --card-shadow: 8px 8px 20px rgba(0,0,0,0.08),
+                 -8px -8px 20px rgba(255,255,255,0.6);
+
+}
+
+/* 🌙 Blue–Green Theme (Dark Mode) */
+.dark {
+  --background: #071417;
+  --foreground: #e6faff;
+
+  --primary: #2ed39d;
+  --primary-dark: #1fa679;
+
+  --secondary: #3ca9ff;
+  --secondary-dark: #1d76bd;
+
+  --accent: #2ccab6;
+  --accent-blue: #55b7fa;
+
+  --card: #0e252b;
+  --border: #123840;
+
+  --card-shadow: 8px 8px 20px rgba(0,0,0,0.6),
+                 -8px -8px 20px rgba(255,255,255,0.03);
+}
+
+/* Apply theme */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-dark: var(--primary-dark);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-dark: var(--secondary-dark);
+
+  --color-accent: var(--accent);
+  --color-accent-blue: var(--accent-blue);
+
+  --color-card: var(--card);
+  --color-border: var(--border);
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animate-float { animation: float 5s ease-in-out infinite; }
+.animate-float-slow { animation: float-slow 8s ease-in-out infinite; }
+.animate-float-delay { animation: float 6s ease-in-out infinite 1s; }
+.animate-gradient { animation: gradient 10s ease infinite; }
+.animate-fade-in { animation: fadeIn 0.8s ease forwards; }
+.animate-slide-up { animation: slideUp 1s ease forwards; }
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* Adjust to your navbar height */
+}
+
